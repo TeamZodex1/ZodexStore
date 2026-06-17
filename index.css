@@ -1,0 +1,41 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@layer base {
+  :root {
+    --bg-primary: #FAFAFA;
+    --bg-surface: #FFFFFF;
+    --bg-surface-hover: #F5F5F5;
+    --text-primary: #0A0A0A;
+    --text-secondary: #6B6B6B;
+    --accent: #C9A96E;
+    --accent-hover: #B8944F;
+    --border: #E5E5E5;
+    --error: #E53E3E;
+    --success: #38A169;
+    --warning: #D69E2E;
+  }
+  .dark {
+    --bg-primary: #0A0A0A;
+    --bg-surface: #141414;
+    --bg-surface-hover: #1A1A1A;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0A0A0;
+    --border: #2A2A2A;
+  }
+  body {
+    @apply bg-bg-primary text-text-primary font-sans antialiased transition-colors duration-300;
+  }
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
